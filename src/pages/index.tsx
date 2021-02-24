@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Button from "../components/Button";
+import Head from 'next/head';
+
 import CompletedChallenges from "../components/CompletedChallenges";
 import Countdown from "../components/Countdown";
 import ExperienceBar from "../components/ExperienceBar";
@@ -13,6 +14,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Início | move.it</title>
+      </Head>
       <ExperienceBar maxExperience={maxExperience} actualExperience={experience} />
       <section>
         <div className={styles.leftContainer}>
