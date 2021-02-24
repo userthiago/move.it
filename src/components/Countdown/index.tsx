@@ -55,7 +55,10 @@ const Countdown: React.FC = () => {
         disabled={hasFinished}
         $secondaryStyle={isActive}
       >
-        {hasFinished ? <>Ciclo encerrado <img src="icons/check.svg" alt="Icone de concluído"/></> : (isActive ? 'Abandonar ciclo' : 'Iniciar um ciclo')}
+        {
+          hasFinished ? <>Ciclo encerrado <img src="icons/check.svg" alt="Icone de concluído"/></> : 
+          (isActive ? 'Abandonar ciclo' : 'Iniciar um ciclo')
+        }
       </Button>
     </Container>
   );
