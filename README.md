@@ -19,7 +19,7 @@
 3) Entrar na pasta do projeto e executar o comando `yarn` ou `npm install` caso preferir.
 4) Por fim, executar `yarn dev` para iniciar o projeto.
 
-###Seguindo o NLW, até que ponto o projeto foi desenvolvido?
+###Seguindo o NLW#4, até que ponto o projeto foi desenvolvido?
 [✔] Dia 1 - Rumo ao próximo nível
 [✔] Dia 2 - Desvendando o Next.js
 [ ] Dia 3 - Contexto e componentes
@@ -27,10 +27,10 @@
 [ ] Dia 5 - Próximo nível com React
 
 ###O projeto possui um protótipo que está sendo seguido?
-Sim, basta [clicar aqui](https://www.figma.com/file/9NKPKqlS6yCg8QA7uGRnEP/Move.it-1.0-(Copy)?node-id=149721%3A851) para acessar o protótipo desenvolvido no figma pela equipe da Rocketseat.
+Sim, basta [clicar aqui](https://www.figma.com/file/9NKPKqlS6yCg8QA7uGRnEP/Move.it-1.0-(Copy)?node-id=149721%3A851) para acessar o protótipo desenvolvido no figma pela equipe da [Rocketseat](https://rocketseat.com.br/).
 
 ###O projeto está hospedado para visualizá-lo online?
 Sim, foi hospedado diretamente no servidor da Vercel e para acessar o projeto [clique aqui.](https://moveitproject.vercel.app/)
 
-###Algo foi desenvolvido a mais em relação ao que foi proposto no NLW#4?
+###Algo foi desenvolvido a mais em relação ao que foi proposto na NLW#4?
 Sim, conforme a finalização do projeto documentarei o que foi inserido a mais no projeto.
