@@ -1,21 +1,23 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import ExperienceBar from "../components/ExperienceBar";
+import Profile from "../components/Profile";
+
+import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
   const maxExperience = 300;
-  const [experience, setExperience] = useState(0);
+  const [experience, setExperience] = useState(50);
 
-  const addExperience = (experienceToAdd: number) => {
-    if(maxExperience >= experience + experienceToAdd) {
-      setExperience(experience + experienceToAdd);
-    }
-  }
-  
   return (
-    <div className="container">
+    <div className={styles.container}>
       <ExperienceBar maxExperience={maxExperience} actualExperience={experience} />
-      <Button type="button" onClick={() => addExperience(50)}>Adicionar 50 de experiência</Button>
+      <section>
+        <div className={styles.leftContainer}>
+          <Profile />
+        </div>
+        <div></div>
+      </section>
     </div>
   );
 }
