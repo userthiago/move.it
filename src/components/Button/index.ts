@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { pixelToRem } from "../../helpers/styleUtils";
 
-const Button = styled.button`
+interface ButtonProps {
+  $secondaryStyle?: boolean;
+}
+
+const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: var(--blue);
+  background: var(${({ $secondaryStyle }) => $secondaryStyle ? '--white' : '--blue'});
   width: 100%;
   height: ${pixelToRem(80)}rem;
   margin-top: ${pixelToRem(32)}rem;
@@ -14,12 +18,21 @@ const Button = styled.button`
   border-radius: 5px;
   transition: background-color 0.2s;
 
-  color: var(--white);
+  color: var(${({ $secondaryStyle }) => $secondaryStyle ? '--title' : '--white'});
   font-size: ${pixelToRem(20)}rem;
   font-weight: 600;
 
-  &:hover {
-    background: var(--blue-dark);
+  &:not(:disabled):hover {
+    background: var(${({ $secondaryStyle }) => $secondaryStyle ? '--red' : '--blue-dark'});
+
+    color: var(--white);
+  }
+
+  &:disabled {
+    background: var(--white);
+    cursor: not-allowed;
+
+    color: var(--text);
   }
 `;
 
