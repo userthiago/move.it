@@ -30,9 +30,14 @@ const Button = styled.button<ButtonProps>`
 
   &:disabled {
     background: var(--white);
+    border-bottom: solid ${pixelToRem(4)}rem var(--green);
     cursor: not-allowed;
 
     color: var(--text);
+
+    > img {
+      margin-left: ${pixelToRem(17.5)}rem;
+    }
   }
 `;
 
