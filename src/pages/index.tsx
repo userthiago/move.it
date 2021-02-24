@@ -1,11 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
+import Button from "../components/Button";
+import ExperienceBar from "../components/ExperienceBar";
 
-import ExperienceBar from './components/ExperienceBar';
-import Button from './components/Button';
-
-import './styles/global.css';
-
-function App() {
+export default function Home() {
   const maxExperience = 300;
   const [experience, setExperience] = useState(0);
 
@@ -14,7 +11,7 @@ function App() {
       setExperience(experience + experienceToAdd);
     }
   }
-
+  
   return (
     <div className="container">
       <ExperienceBar maxExperience={maxExperience} actualExperience={experience} />
@@ -22,5 +19,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { calcExperience } from '../../helpers/styleUtils';
 
 import { Container } from './styles';
