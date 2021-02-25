@@ -125,6 +125,7 @@ export const ProfileContainer = styled.div<ProfileProps>`
       margin-bottom: ${pixelToRem(8)}rem;
 
       > strong {
+        margin-left: ${pixelToRem(30)}rem;
         margin-right: ${pixelToRem(6)}rem;
 
         font-size: ${pixelToRem(24)}rem;
@@ -142,6 +143,7 @@ export const ProfileContainer = styled.div<ProfileProps>`
         border-radius: 50%;
         transition: background-color 0.25s;
 
+        font-size: ${pixelToRem(18)}rem;
         color: var(--gray);
 
         &:hover {

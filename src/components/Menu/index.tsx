@@ -10,18 +10,16 @@ const Menu: React.FC = () => {
   const { isMenuActive, changeMenuState } = useContext(MenuContext);
   const { level, percentToNextLevel } = useContext(ProfileContext);
 
-  const id = 'menu';
+  const id = 'menu-container';
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLElement>) => {
-    console.log('cliquei');
-
     const target = e.target as HTMLInputElement;
-    if (target.id !== id) changeMenuState();
+    if (target.id === id) changeMenuState();
   };
 
   return (
-    <Container onClick={handleOutsideClick} $menuState={isMenuActive}>
-      <div id={id} className="menu__wrapper">
+    <Container id={id} onClick={handleOutsideClick} $menuState={isMenuActive}>
+      <div className="menu__wrapper">
         <button type="button" onClick={changeMenuState}><img src="/icons/close.svg" alt="Fechar"/></button>
         <ProfileContainer levelPercent={percentToNextLevel} >
           <div className="profile__picture">
@@ -31,7 +29,7 @@ const Menu: React.FC = () => {
           <p>Nível {level}</p>
           <div className="profile__info">
             <strong>Thiago Santos</strong>
-            <button type="button"><FaCog size={18} /></button>
+            <button type="button"><FaCog /></button>
           </div>
         </ProfileContainer>
       </div>
