@@ -5,8 +5,10 @@ import Countdown from "../components/Countdown";
 import ExperienceBar from "../components/ExperienceBar";
 import Profile from "../components/Profile";
 import ChallengeBox from "../components/ChallengeBox";
+import Menu from '../components/Menu';
 
 import styles from '../styles/pages/Home.module.css';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Head>
         <title>Início | move.it</title>
       </Head>
+      <Header />
+      <Menu />
       <ExperienceBar />
       <section>
         <div className={styles.leftContainer}>

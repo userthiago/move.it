@@ -1,7 +1,7 @@
-# NLW#04 - [move.it](https://moveitproject.vercel.app/)
+# NLW#04 - [move.it](https://letsmoveit.vercel.app/)
 
 ### O que está sendo desenvolvido?
-[Move.it](https://moveitproject.vercel.app/) é um sistema gamificado que aplica a **técnica de pomodoro** durante um ciclo especificado pelo usuário, gratificando-o com um sistema de níveis e conquistas a cada ciclo concluído com sucesso. O projeto está sendo apresentado e desenvolvido na Next Level Week realizada pela empresa [Rocketseat](https://rocketseat.com.br/).
+[Move.it](https://letsmoveit.vercel.app/) é um sistema gamificado que aplica a **técnica de pomodoro** durante um ciclo especificado pelo usuário, gratificando-o com um sistema de níveis e conquistas a cada ciclo concluído com sucesso. O projeto está sendo apresentado e desenvolvido na Next Level Week realizada pela empresa [Rocketseat](https://rocketseat.com.br/).
 
 ### Quais tecnologias estão sendo utilizadas?
 - Reactjs
@@ -30,7 +30,7 @@
 Sim, basta [clicar aqui](https://www.figma.com/file/9NKPKqlS6yCg8QA7uGRnEP/Move.it-1.0-(Copy)?node-id=149721%3A851) para acessar o protótipo desenvolvido no figma pela equipe da [Rocketseat](https://rocketseat.com.br/).
 
 ### O projeto está hospedado para visualizá-lo online?
-Sim, foi hospedado diretamente no servidor da Vercel e para acessar o projeto [clique aqui.](https://moveitproject.vercel.app/)
+Sim, foi hospedado diretamente no servidor da Vercel e para acessar o projeto [clique aqui.](https://letsmoveit.vercel.app/)
 
 ### Algo foi desenvolvido a mais em relação ao que foi proposto na NLW#4?
 Sim, conforme a finalização do projeto documentarei o que foi inserido a mais no projeto.

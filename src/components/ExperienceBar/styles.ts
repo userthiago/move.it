@@ -5,7 +5,7 @@ interface BarProps {
   experience: number;
 }
 
-export const Container = styled.header<BarProps>`
+export const Container = styled.div<BarProps>`
   display: flex;
   align-items: center;
 
