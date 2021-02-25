@@ -1,4 +1,5 @@
 import { createContext, useState, ReactNode, useEffect, useContext } from 'react';
+import { DEFAULT_TIMER } from '../helpers/constants';
 import { ChallengesContext } from './ChallengesContext';
 
 interface TimeProviderProps {
@@ -19,9 +20,8 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function TimeProvider({ children }: TimeProviderProps) {
   const { startNewChallenge } = useContext(ChallengesContext);
-  const defaultTime = 0.1 * 60;
   
-  const [time, setTime] = useState(defaultTime);
+  const [time, setTime] = useState(DEFAULT_TIMER);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
@@ -30,12 +30,12 @@ export function TimeProvider({ children }: TimeProviderProps) {
 
     if(isActive) {
       clearTimeout(countdownTimeout);
-      setTime(defaultTime);
+      setTime(DEFAULT_TIMER);
     }
   }
 
   function resetCountdown() {
-    setTime(defaultTime);
+    setTime(DEFAULT_TIMER);
     setIsActive(false);
     setHasFinished(false);
   }

@@ -1,5 +1,5 @@
-import { FONTSIZE_DEFAULT } from "./constants";
+import { DEFAULT_FONTSIZE } from "./constants";
 
 export function pixelToRem(size: number) {
-  return (size / FONTSIZE_DEFAULT).toFixed(3);
+  return (size / DEFAULT_FONTSIZE).toFixed(3);
 }

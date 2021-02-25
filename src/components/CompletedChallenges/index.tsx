@@ -4,12 +4,12 @@ import { ChallengesContext } from '../../contexts/ChallengesContext';
 import { Container } from './styles';
 
 const CompletedChallenges: React.FC = () => {
-  const {challengesCompleted} = useContext(ChallengesContext);
+  const { completedChallenges } = useContext(ChallengesContext);
 
   return (
     <Container>
       <span>Desafios completos</span>
-      <span>{challengesCompleted}</span>
+      <span>{completedChallenges}</span>
     </Container>
   );
 }
