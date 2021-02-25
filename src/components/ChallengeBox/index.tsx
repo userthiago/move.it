@@ -19,7 +19,7 @@ const ChallengeBox: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container $hasChallenge={!!activeChallenge}>
       {activeChallenge ? 
       (
         <div className="challenge__active">

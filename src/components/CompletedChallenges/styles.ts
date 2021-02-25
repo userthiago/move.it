@@ -19,4 +19,8 @@ export const Container = styled.div`
   span:last-child {
     font-size: ${pixelToRem(24)}rem;
   }
+
+  @media(max-width: 720px) {
+    margin: ${pixelToRem(40)}rem 0;
+  }
 `;

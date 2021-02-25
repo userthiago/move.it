@@ -1,20 +1,42 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 import { pixelToRem } from '../../helpers/styleUtils';
 
-export const Container = styled.div`
+interface ChallengeBoxProps {
+  $hasChallenge: boolean;
+}
+
+export const Container = styled.div<ChallengeBoxProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  bottom: -80vh;
 
   background: var(--white);
   height: 100%;
   padding: ${`${pixelToRem(25)}rem ${pixelToRem(56)}rem ${pixelToRem(32)}rem`};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  transition: bottom 0.4s ease-in-out;
 
   text-align: center;
+
+  @media(max-width: 720px) {
+    border-radius: 5px 5px 0 0;
+  }
+
+  ${({ $hasChallenge }) => $hasChallenge && css`
+    @media(max-width: 720px) {
+      z-index: 2;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+
+      height: 80vh;
+    }
+  `}
 
   .challenge {
     &__active {

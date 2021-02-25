@@ -14,6 +14,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.25rem;
   align-content: center;
+  grid-auto-flow: row;
+}
+
+@media(max-width: 720px) {
+  .container {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .container section {
+    flex: none;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
 .leftContainer {

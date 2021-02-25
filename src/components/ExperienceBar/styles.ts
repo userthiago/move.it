@@ -9,6 +9,8 @@ export const Container = styled.div<BarProps>`
   display: flex;
   align-items: center;
 
+  margin-bottom: 3rem;
+
   span {
     font-size: ${pixelToRem(14)}rem;
   }
