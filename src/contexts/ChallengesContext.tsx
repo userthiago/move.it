@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useContext } from 'react';
+import { createContext, useState, ReactNode, useContext, useEffect } from 'react';
 import { ProfileContext } from './ProfileContext';
 
 import challenges from '../../challenges.json';
@@ -29,11 +29,22 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [completedChallenges, setCompletedChallenges] = useState(0);
   const [activeChallenge, setActiveChallenge] = useState(null);
 
+
+  useEffect(() => {
+    Notification.requestPermission();
+  }, []);
+
   function startNewChallenge() {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
-    const challenge = challenges[randomChallengeIndex];
+    const uniqueChallenge = challenges[randomChallengeIndex];
     
-    setActiveChallenge(challenge);
+    setActiveChallenge(uniqueChallenge);
+
+    if(Notification.permission === 'granted') {
+      new Notification('Novo desafio 🎉', {
+        body: `Valendo ${uniqueChallenge.amount}xp!`
+      });
+    }
   }
 
   function completeChallenge() {

@@ -1,15 +1,12 @@
 import React, { useContext } from 'react';
-import { TimeContext } from '../../contexts/TimeContext';
+import { CountdownContext } from '../../contexts/CountdownContext';
 
 import Button from '../Button';
 
 import { Container } from './styles';
 
 const Countdown: React.FC = () => {
-  const {time, isActive, hasFinished, changeCountdown} = useContext(TimeContext);
-
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
+  const {minutes, seconds, isActive, hasFinished, changeCountdown} = useContext(CountdownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');

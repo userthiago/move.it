@@ -1,16 +1,16 @@
 import '../styles/global.css';
 
 import { ChallengesProvider } from '../contexts/ChallengesContext';
-import { TimeProvider } from '../contexts/TimeContext';
+import { CountdownProvider } from '../contexts/CountdownContext';
 import { ProfileProvider } from '../contexts/ProfileContext';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ProfileProvider>
       <ChallengesProvider>
-        <TimeProvider>
+        <CountdownProvider>
           <Component {...pageProps} />
-        </TimeProvider>
+        </CountdownProvider>
       </ChallengesProvider>
     </ProfileProvider>
   );
