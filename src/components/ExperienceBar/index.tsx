@@ -1,22 +1,21 @@
-import React from 'react';
-import { calcExperience } from '../../helpers/styleUtils';
+import React, { useContext } from 'react';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
 
 import { Container } from './styles';
 
-interface ExperienceBarProps {
-  actualExperience: number;
-  maxExperience: number;
-}
+const ExperienceBar: React.FC = () => {
+  const {currentExperience, experienceToNextLevel} = useContext(ChallengesContext);
 
-const ExperienceBar: React.FC<ExperienceBarProps> = ({actualExperience, maxExperience}) => {
+  const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;
+
   return (
-    <Container experience={calcExperience(actualExperience, maxExperience)}>
+    <Container experience={percentToNextLevel}>
       <span>0 xp</span>
       <div className="bar">
         <div className="bar__progression" />
-        <span className="bar__current-experience">{actualExperience} xp</span>
+        <span className="bar__current-experience">{currentExperience} xp</span>
       </div>
-      <span>{maxExperience} xp</span>
+      <span>{experienceToNextLevel} xp</span>
     </Container>
   );
 }

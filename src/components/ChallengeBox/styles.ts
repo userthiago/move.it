@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { cssVar, shade } from 'polished';
+import styled from 'styled-components';
+import { shade } from 'polished';
 import { pixelToRem } from '../../helpers/styleUtils';
 
 export const Container = styled.div`
@@ -112,14 +112,15 @@ export const Container = styled.div`
         background: var(--green);
 
         &:hover {
-          background: ${shade(0.2, `${cssVar('--green')}`)};
+          background: ${shade(0.2, '#4CD62B')};
         }
       }
 
       &--failed {
         background: var(--red);
+
         &:hover {
-          background: ${shade(0.2, `${cssVar('--red')}`)};
+          background: ${shade(0.25, '#E83F5B')};
         }
       }
     }
