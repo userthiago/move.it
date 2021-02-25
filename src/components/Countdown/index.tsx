@@ -10,7 +10,9 @@ let countdownTimeout: NodeJS.Timeout;
 const Countdown: React.FC = () => {
   const { startNewChallenge } = useContext(ChallengesContext);
 
-  const [time, setTime] = useState(0.1 * 60);
+  const defaultTime = 0.1 * 60;
+
+  const [time, setTime] = useState(defaultTime);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 

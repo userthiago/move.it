@@ -22,7 +22,7 @@
 ### Seguindo o NLW#4, até que ponto o projeto foi desenvolvido?
 <p>[✔] Dia 1 - Rumo ao próximo nível</p>
 <p>[✔] Dia 2 - Desvendando o Next.js</p>
-<p>[ ] Dia 3 - Contexto e componentes</p>
+<p>[✔] Dia 3 - Contexto e componentes</p>
 <p>[ ] Dia 4 - Storage, SSR & Lambda</p>
 <p>[ ] Dia 5 - Próximo nível com React</p>
 
