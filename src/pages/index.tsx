@@ -6,6 +6,7 @@ import ExperienceBar from "../components/ExperienceBar";
 import Profile from "../components/Profile";
 import ChallengeBox from "../components/ChallengeBox";
 import Menu from '../components/Menu';
+import RegisterModal from '../components/RegisterModal';
 
 import styles from '../styles/pages/Home.module.css';
 import Header from '../components/Header';
@@ -29,6 +30,7 @@ export default function Home() {
           <ChallengeBox />
         </div>
       </section>
+      <RegisterModal />
     </div>
   );
 }

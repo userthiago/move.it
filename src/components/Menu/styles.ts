@@ -7,7 +7,7 @@ interface MenuProps {
 }
 
 export const Container = styled.div<MenuProps>`
-  z-index: 1000;
+  z-index: 500;
   position: fixed;
   right: 0;
   top: 0;
