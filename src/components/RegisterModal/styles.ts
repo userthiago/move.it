@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { pixelToRem } from '../../helpers/styleUtils';
 
 const animationBackground = keyframes`
@@ -23,7 +23,7 @@ const animationBox = keyframes`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{ step: number }>`
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -46,7 +46,6 @@ export const Container = styled.div`
 
       background: var(--white);
       height: ${pixelToRem(640)}rem;
-      width: ${pixelToRem(540)}rem;
       padding: ${pixelToRem(32)}rem ${pixelToRem(62)}rem;
       border-radius: 8px;
 
@@ -86,17 +85,38 @@ export const Container = styled.div`
     &__form {
       flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
+
+      width: ${pixelToRem(440)}rem;
+      overflow-x: hidden;
+
+      @media(max-width: 720px) {
+        width: 100%;
+      }
 
       .form {
         &__step {
           flex: 1;
-          display: none;
+          display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
+          min-width: ${pixelToRem(400)}rem;
+          margin: 0 ${pixelToRem(20)}rem;
+          transition: transform 0.4s ease-in-out;
+
+          ${({ step }) => step !== 0 && css`
+            transform: translateX(-${pixelToRem(440)}rem);
+
+            @media(max-width: 720px) {
+              transform: translateX(calc(-100% - ${pixelToRem(40)}rem));
+            }
+          `}
+
+          @media(max-width: 720px) {
+            min-width: calc(100% - ${pixelToRem(40)}rem);
+          }
 
           img {
             width: 100%;
@@ -138,10 +158,6 @@ export const Container = styled.div`
             @media(max-width: 400px) {
               font-size: ${pixelToRem(16)}rem;
             } 
-          }
-
-          &--active {
-            display: flex;
           }
         }
       }

@@ -14,7 +14,7 @@ const RegisterModal: React.FC = () => {
       setActualStep(1);
     }
     if(actualStep === 1) {
-      setModalState(false);
+      setActualStep(0);
     }
   }
 
@@ -39,14 +39,14 @@ const RegisterModal: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container step={actualStep}>
       <div className="modal__steps-box">
         <div className="steps-box__ball-group">
           <span className={`ball-group__ball ${actualStep === 0 ? 'ball-group__ball--active' : ''}`} />
           <span className={`ball-group__ball ${actualStep === 1 ? 'ball-group__ball--active' : ''}`} />
         </div>
         <form className="steps-box__form">
-          <div className={`form__step ${actualStep === 0 ? 'form__step--active' : ''}`}>
+          <div className="form__step form__step--first-step">
             <img src="/developer.svg" alt="Imagem de um desenvolvedor"/>
             <strong>Vamos criar um perfil</strong>
             <p>Insira o seu usuário do Github ou selecione o perfil de convidado para entrar sem se identificar</p>
@@ -54,7 +54,7 @@ const RegisterModal: React.FC = () => {
             <FormButton color="--blue" type="button" onClick={changeStep}>Entrar com o Github</FormButton>
             <FormButton type="button" onClick={changeStep}>Entrar como convidado</FormButton>
           </div>
-          <div className={`form__step ${actualStep === 1 ? 'form__step--active' : ''}`}>
+          <div className="form__step">
             <Input id="tempo-ciclo" placeholder="Tempo do ciclo" value={countdownTimer} changeValueFunction={countdownTimerValue}/>
             <FormButton color="--blue" type="button" onClick={changeStep}>Sair</FormButton>
           </div>
