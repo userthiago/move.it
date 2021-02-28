@@ -14,7 +14,6 @@ interface ChallengeData {
 }
 
 interface ChallengesContextData {
-  completedChallenges: number;
   startNewChallenge: () => void;
   resetChallenge: () => void;
   completeChallenge: () => void;
@@ -24,11 +23,9 @@ interface ChallengesContextData {
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const { currentExperience, experienceToNextLevel, levelUp, addExperience } = useContext(ProfileContext);
+  const { currentExperience, experienceToNextLevel, levelUp, addExperience, addChallengeCompletedToCounter } = useContext(ProfileContext);
 
-  const [completedChallenges, setCompletedChallenges] = useState(0);
   const [activeChallenge, setActiveChallenge] = useState(null);
-
 
   useEffect(() => {
     Notification.requestPermission();
@@ -63,7 +60,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     addExperience(newCurrentExperience);
     setActiveChallenge(null);
-    setCompletedChallenges(completedChallenges + 1);
+    addChallengeCompletedToCounter();
   }
 
   function resetChallenge() {
@@ -73,7 +70,6 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   return (
     <ChallengesContext.Provider 
       value={{ 
-        completedChallenges, 
         startNewChallenge,
         resetChallenge,
         completeChallenge,
