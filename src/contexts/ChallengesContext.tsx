@@ -23,7 +23,12 @@ interface ChallengesContextData {
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const { currentExperience, experienceToNextLevel, levelUp, addExperience, addChallengeCompletedToCounter } = useContext(ProfileContext);
+  const { currentExperience, 
+          experienceToNextLevel, 
+          levelUp, 
+          addExperience, 
+          addChallengeCompletedToCounter 
+        } = useContext(ProfileContext);
 
   const [activeChallenge, setActiveChallenge] = useState(null);
 

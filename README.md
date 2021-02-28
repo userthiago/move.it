@@ -23,8 +23,9 @@
 <p>[✔] Dia 1 - Rumo ao próximo nível</p>
 <p>[✔] Dia 2 - Desvendando o Next.js</p>
 <p>[✔] Dia 3 - Contexto e componentes</p>
-<p>[ ] Dia 4 - Storage, SSR & Lambda</p>
-<p>[ ] Dia 5 - Próximo nível com React</p>
+<p>[✔] Dia 4 - Storage, SSR & Lambda</p>
+<p>[✔] Dia 5 - Próximo nível com React</p>
+<p>[ ] Dia Bonus - Desafios extras</p>
 
 ### O projeto possui um protótipo que está sendo seguido?
 Sim, basta [clicar aqui](https://www.figma.com/file/9NKPKqlS6yCg8QA7uGRnEP/Move.it-1.0-(Copy)?node-id=149721%3A851) para acessar o protótipo desenvolvido no figma pela equipe da [Rocketseat](https://rocketseat.com.br/).
