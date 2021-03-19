@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import axios from 'axios';
+import React, { FormEvent, useContext } from 'react';
 import { ChallengesContext } from '../../contexts/ChallengesContext';
 import { CountdownContext } from '../../contexts/CountdownContext';
+import { ProfileContext } from '../../contexts/ProfileContext';
 
 import { Container } from './styles';
 
 const ChallengeBox: React.FC = () => {
+  const { level, challengesCompleted, currentExperience } = useContext(ProfileContext);
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
   const { resetCountdown } = useContext(CountdownContext);
 
@@ -16,6 +19,15 @@ const ChallengeBox: React.FC = () => {
   function handleChallengeSucceeded() {
     completeChallenge()
     resetCountdown();
+  }
+
+  function handleSignUpToSystem() {
+    axios.post('/api/users', {
+      username: 'userthiago',
+      level,
+      currentExperience,
+      challengesCompleted,
+    })
   }
 
   return (
@@ -56,6 +68,7 @@ const ChallengeBox: React.FC = () => {
             <img src="icons/level-up.svg" alt="Level Up"/>
             Complete-os e ganhe experiência e avance de level.
           </p>
+          <button type="button" onClick={handleSignUpToSystem}>Teste</button>
         </div>
       )}
     </Container>
